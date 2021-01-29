@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <title>명준</title>
+    
+    <style>
+      a[target="_blank"] { color: red; }
+      article p {color: blue; }
+      #google:link { color: yellow; }
+      #google:visited { color: green; }
+      #google:hover { background-color: blue; }
+      html {
+        font-size: 32px;        
+      }
+      #main{
+        background-color: bisque;
+        width: 75%;
+      }      
+      #px{
+        background-color: red;
+        width: 16px;
+        height: 16px;
+      }
+      #em{
+        background-color: blue;
+        width: 1em;
+        height: 1em;
+        font-size: 24px;
+      }
+      #rem{
+        background-color: yellow;
+        width: 1rem;
+        height: 1rem;
+      }
+      #per{
+        background-color: skyblue;
+        width: 50%;
+      }
+      #font{
+        font : oblique 900 35px 'Potta One', cursive
+      }
+      h1 {
+        background-color: pink;
+        text-align: center;        
+      }
+      h3 {
+        background-color: yellowgreen;
+        text-align: left;        
+      }
+      .p {
+        background-color: royalblue;
+        text-align: right;        
+      }
+      #up {
+        background-color: skyblue;
+        line-height: 24px;
+        text-indent: 15px;
+      }
+      #down {
+        background-color: pink;
+        line-height: 2;   
+        letter-spacing: 5px;   
+      }
+      #inner {
+        width:200px;
+        height:100px;
+        background-attachment: pink;
+        margin: 20px;
+        padding: 20px;
+        border-style: dashed solid dotted double;
+        border-width: 6px 8px 10px 12px;
+        border-color: red blue yellow green;
+        border-radius: 30px 20px 10px 0/ 0 10px 20px 30px;
+      }
+      #top {
+        width: 200px;
+        height: 100px;
+        background-color: pink;
+        box-sizing: content-box;
+        padding:20px;
+      }
+      #bottom {
+        width: 200px;
+        height: 100px;
+        background-color: lemonchiffon;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+      #block {
+        background-color: pink;
+        width: 200px;
+        height: 100px;
+        margin: 20px;
+        padding: 20px;
+      }
+      #inline {
+        background-color: lemonchiffon;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        margin: 20px;
+      }
+      #parent {
+        background-color: pink;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 50px;
+        left: 50px;
+      }
+      #child {
+        background-color: lemonchiffon;
+        width: 100px;
+        height: 100px;
+        position: static;
+      }
+      #child2 {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 20px;
+        left: 20px
+      }
+      #main2 {
+        height: 1200px;
+      }
+      #fixed {
+        background-color: pink;
+        height: 60px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+      #front {
+        background-color: pink;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        z-index: 1;
+      }
+      #back {
+        background-color: lemonchiffon;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        z-index: 2;
+      }
+      #container {
+        background-color: skyblue;
+        display: flex;
+        flex-direction: row;
+        height: 250px;
+        width: 250px;
+      }
+      .item {
+        border-radius: 4px;
+        background-color: pink;
+        height: 60px;
+        width: 60px;
+      }
+      #one {
+        flex: 1;
+      }
+      #last {
+        box-sizing: border-box;
+        margin:0;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <h2>회원가입</h2>
+    <form action="my-app" method="get">
+      <div>
+        <label for="userid">아이디: </label>
+        <input type="text" id="userid" name="id" 
+        placeholder="아이디를 입력하세요." >
+      </div>
+      <div>
+        <label for="password">비밀번호: </label>
+        <input type="password" id="password" name="password" 
+        placeholder="비밀번호를 입력하세요." >
+      </div>    
+      <div>
+        <label for="gender">성별: </label>
+        <select name="gender" id="gender">
+          <option value="male">남성</option>
+          <option value="female">여성</option>
+        </select>
+      </div>
+      <div>
+        <label for="job">직업: </label>
+        <select name="job" id="job">
+          <option value="student">학생</option>
+          <option value="teacher">선생님</option>
+          <option value="etc">기타</option>
+        </select>
+      </div>
+      <div>
+        <label for="introduce">자기소개: </label>
+        <textarea name="introduce" id="introduce" 
+        cols="30" rows="10" placeholder="자기소개를 입력하세요.">
+        </textarea>
+      </div>
+      <div>
+      <button type="submit">제출</button>
+      <button type="reset">리셋</button>
+      </div>
+    </form>
+    <div>
+      <a href="https://www.google.com/" target="_self">구글 현재창</a>
+      <a href="https://www.google.com/" target="_blank">구글 현재창</a>
+      <a href="https://www.google.com/" target="_self">구글 현재창</a>
+    </div>
+    <div>
+      <article>
+        <div>자식1
+          <p>후손1</p>
+        </div>
+        <div>자식2
+          <p>후손2</p>
+        </div>
+        <p>자식3</p>
+      </article>
+    </div>
+    <div>
+      <a href="https://www.google.com/" id="google" target="_blank">구글</a>
+    </div>
+    <div id="main">
+      단위
+      <div id="px">px</div>
+      <div id="em">em</div>
+      <div id="rem">rem</div>
+      <div id="per">per</div>
+    </div>
+    <div>
+      <div id="font">
+        뭈쨍이
+      </div>
+      <div>
+        <h1>나는 가운데</h1>
+        <h3>나는 왼쪽</h3>
+        <p class="p">나는 오른쪽</p>
+      </div>
+      <div>
+        <p id="up">동해물과 백두산이 
+          마르고 닳도록 하느님이 보우하사 우리나라 만세 
+          무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세</p>
+        <p id="down">동해물과 백두산이 
+          마르고 닳도록 하느님이 보우하사 우리나라 만세 
+          무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세</p>
+      </div>
+      <div id="main">
+        <div id="inner">
+          이것은 내용입니다.
+        </div>
+      </div>
+    </div>
+    <div>
+      <div id="top">
+        top
+      </div>
+      <div id="bottom">
+        bottom
+      </div>
+    </div>
+    <div>
+      <p id="block">
+        block
+      </p>
+      <span id="inline">
+        inline
+      </span>
+    </div><br><br><br>
+    <div id="parent">
+      <div id="child">
+        child
+      </div>
+      <div id="child2">
+        child2
+      </div>
+    </div><br><br><br>
+    <div id="main2">
+      <div id="fixed">
+        저는 고정이에요
+      </div>
+     히히히
+    </div>
+    <div>
+      <div id="front">
+        front
+      </div>
+      <div id="back">
+        back
+      </div>
+    </div><br><br><br>
+    <div id="container">
+      <div id="one" class="item">1</div>
+      <div id="two" class="item">2</div>
+      <div id="three" class="item">3</div>
+    </div><br><br><br>
+    <div id="last">
+
+      <header class="header">
+        <h1>My Webpage</h1>
+      </header>
+      <nav class="navbar">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Q&A</a>
+      </nav>
+      <div id="main2">
+        <article class="content">
+          <h2>About me</h2>
+          <h3>Introduce :</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, ipsum quod pariatur expedita eligendi nulla quia velit labore ea explicabo provident numquam debitis omnis cum alias eaque mollitia vero nam.</p>
+        </article>
+        <aside class="aside">
+          <h2>AD</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum quia, eaque sed reprehenderit voluptatibus aliquam ullam quasi at nemo, molestias accusantium ex tempora laborum beatae provident earum quod? Consequatur, blanditiis!</p>
+        </aside>
+      </div>
+      <footer class="footer">
+        <h2>Footer</h2>
+      </footer>
+
+    </div>
+
+  </body>
+
+</html>
